@@ -159,16 +159,19 @@ def train():
         nq = tk.Label(fenetre, text=f"Question n°{num_question} sur {variable_globale.get()}",bg='grey')
         nq.pack(pady=10)
         
-
-    def pick_num (nb_used,tot):
-        current_time = int(time.time())
-        np.random.seed(current_time)
-        random_index = np.random.randint(len(tot))
+    def pick_num(nb_used, tot):
+        # Utiliser le timestamp actuel pour créer une graine pseudo-aléatoire
+        current_time = int(time.time() * 1000)  # Multiplier par 1000 pour une précision milliseconde
+        random_index = current_time % len(tot)  # Utiliser modulo pour rester dans les limites de la liste
+    
+        # Boucle pour éviter les index déjà utilisés
         while random_index in nb_used:
-            random_index = np.random.randint(len(tot))
+            current_time = (current_time * 3 + 7) % 100000  # Réajuster la graine
+            random_index = current_time % len(tot)
+    
         selected_value = tot[random_index]
-        nb_used += [random_index]
-        return selected_value,nb_used
+        nb_used.append(random_index)  # Ajouter l'index utilisé
+        return selected_value, nb_used
 
     def show_correction(fenetre,correction_value, tot,variables,num_question,nb_pts_tot,nb_used,uncorr):
         def afficher_score(nb_pts,num_question,nb_used,tot):
