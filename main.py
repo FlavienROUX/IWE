@@ -33,15 +33,15 @@ def train():
             file_path = 'M1.txt'
             MA = read_github_file(repository_name,file_path,branch)
         if tt == 2:
-            repository_name = 'PStarUnicron/JuL'
+            repository_name = 'FlavienROUX/IWE'
             file_path = 'M2.txt'
             MA = read_github_file(repository_name,file_path,branch)
         if tt == 3:
-            repository_name = 'PStarUnicron/JuL'
+            repository_name = 'FlavienROUX/IWE'
             file_path = 'M3.txt'
             MA = read_github_file(repository_name,file_path,branch)
         if tt == 4:
-            repository_name = 'PStarUnicron/JuL'
+            repository_name = 'FlavienROUX/IWE'
             file_path = 'M4.txt'
             MA = read_github_file(repository_name,file_path,branch)
         MA = MA.encode('utf-8')
@@ -79,7 +79,7 @@ def train():
             #status bar
             bar = tk.Frame(fenetre, relief='ridge', borderwidth=5)
             bar.pack(side='top')
-            repository_name = 'PStarUnicron/JuL'
+            repository_name = 'FlavienROUX/IWE'
             image_path = f'IMG/{name}'
             branch = 'main'
 
@@ -134,8 +134,8 @@ def train():
         label1.pack(pady=5)
         label_line_break1 = tk.Label(fenetre, text="",bg='grey')
         label_line_break1.pack(pady=5)
-        repository_owner = 'PStarUnicron'
-        repository_name = 'JuL'
+        repository_owner = 'FlavienROUX'
+        repository_name = 'IWE'
         directory_path = 'IMG'  
         github_token = ''  
         files_list = get_github_directory_files(repository_owner, repository_name, directory_path, github_token)
@@ -333,7 +333,7 @@ def train():
     ############################################################################################################################################
     fenetre = tk.Tk()
     fenetre.title("Choix du module")
-    repository_name = 'PStarUnicron/JuL'
+    repository_name = 'FlavienROUX/IWE'
     image_path = 'IMG/welding-181656_640.jpg'
     branch = 'main'
 
