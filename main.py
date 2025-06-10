@@ -27,7 +27,7 @@ def train():
             except Exception as e:
                 return f"Error: {e}"
 
-        repository_name = 'PStarUnicron/JuL'
+        repository_name = 'FlavienROUX/IWE'
         branch = 'main'
         if tt == 1:
             file_path = 'M1.txt'
